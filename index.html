@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication Portal</title>
+  <!--External CSS Link-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--Sign up Page-->
+  <div id="signup-card" class="auth-container">
+    <div class="auth-header">
+      <h1>Create Account</h1>
+    </div>
+
+    <form id="signup-form" novalidate>
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="signup-name">Full Name</label>
+        <div class="input-wrapper">
+          <input type="text" id="signup-name" class="form-control" placeholder="John Doe">
+        </div>
+        <span class="error-msg" id="name-error"></span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="signup-email">Email Address</label>
+        <div class="input-wrapper">
+          <input type="email" id="signup-email" class="form-control" placeholder="example@mail.com">
+        </div>
+        <span class="error-msg" id="signup-email-error"></span>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="signup-phone">Phone Number</label>
+        <div class="input-wrapper">
+          <input type="tel" id="signup-phone" class="form-control" placeholder="10-digit mobile number">
+        </div>
+        <span class="error-msg" id="phone-error"></span>
+      </div>
+
+      <!-- Location/City -->
+      <div class="form-group">
+        <label for="signup-location">Location / City</label>
+        <div class="input-wrapper">
+          <input type="text" id="signup-location" class="form-control" placeholder="e.g. New York">
+        </div>
+        <span class="error-msg" id="location-error"></span>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="signup-password">Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="signup-password" class="form-control" placeholder="Min. 8 characters (letters + numbers)">
+          <button type="button" class="toggle-password" data-target="signup-password">Show</button>
+        </div>
+        <span class="error-msg" id="signup-pass-error"></span>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label for="signup-confirm">Confirm Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="signup-confirm" class="form-control" placeholder="Re-enter password">
+          <button type="button" class="toggle-password" data-target="signup-confirm">Show</button>
+        </div>
+        <span class="error-msg" id="confirm-error"></span>
+      </div>
+
+      <button type="submit" class="btn-submit">Sign Up</button>
+    </form>
+
+    <p class="redirect-text">
+      Already have an account? <a href="#" id="to-signin">Sign In</a>
+    </p>
+  </div>
+
+
+  <!-- Sign In page-->
+  <div id="signin-card" class="auth-container hidden">
+    <div class="auth-header">
+      <h1>Welcome Back</h1>
+      <p>Please enter your details to sign in</p>
+    </div>
+
+    <form id="signin-form" novalidate>
+      <!-- Email -->
+      <div class="form-group">
+        <label for="signin-email">Email Address</label>
+        <div class="input-wrapper">
+          <input type="email" id="signin-email" class="form-control" placeholder="example@mail.com">
+        </div>
+        <span class="error-msg" id="signin-email-error-msg"></span>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="signin-password">Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="signin-password" class="form-control" placeholder="Enter your password">
+          <button type="button" class="toggle-password" data-target="signin-password">Show</button>
+        </div>
+        <span class="error-msg" id="signin-pass-error-msg"></span>
+      </div>
+
+      <button type="submit" class="btn-submit">Sign In</button>
+    </form>
+
+    <p class="redirect-text">
+      Don't have an account? <a href="#" id="to-signup">Sign Up</a>
+    </p>
+  </div>
+
+  <!--External Script File-->
+<script src="script.js"></script>
+</body>
+</html>

@@ -233,7 +233,7 @@
           alert(`Authentication successful! Welcome, ${registeredUser.name}.`);
           
           // Simulated redirection to the required destination page 
-          window.location.href = "https://www.google.com"; // Replace with your real Tourist Landing Page path
+          window.location.href = "https://rmalathi12.github.io/Module1_Assignment_Travel_Web_App/"; // Tourist Landing Page path
         } else {
           setStatus(signinPasswordInput, signinPasswordErr, false, "Incorrect password. Please try again.");
         }
